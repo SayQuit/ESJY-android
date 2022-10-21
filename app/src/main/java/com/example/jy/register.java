@@ -19,14 +19,10 @@ public class register extends AppCompatActivity {
         intent.setClass(this,login.class);
         startActivity(intent);
     }
-    public void enterMain(View v){
+    public void enterMainActivity(View v){
         Intent intent=new Intent();
         intent.setClass(this,MainActivity.class);
         startActivity(intent);
     }
-    public void enterDetail(View v){
-        Intent intent=new Intent();
-        intent.setClass(this,detail.class);
-        startActivity(intent);
-    }
+
 }

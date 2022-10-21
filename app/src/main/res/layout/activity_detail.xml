@@ -18,25 +18,6 @@
             android:text="这是商品详情页面"
 
             ></TextView>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="List界面"
-            android:onClick="enterMain"
-            ></Button>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="登录界面"
-            android:onClick="enterLogin"
-            ></Button>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="注册界面"
-            android:onClick="enterRegister"
-            ></Button>
 
 
 

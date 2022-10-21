@@ -16,7 +16,7 @@ public class login extends AppCompatActivity {
 
     public void enterMain(View v){
         Intent intent=new Intent();
-        intent.setClass(this,MainActivity.class);
+        intent.setClass(this,Main.class);
         startActivity(intent);
     }
     public void enterRegister(View v){
@@ -24,9 +24,9 @@ public class login extends AppCompatActivity {
         intent.setClass(this,register.class);
         startActivity(intent);
     }
-    public void enterDetail(View v){
+    public void enterLoginSuccess(View v){
         Intent intent=new Intent();
-        intent.setClass(this,detail.class);
+        intent.setClass(this,loginSuccess.class);
         startActivity(intent);
     }
 }

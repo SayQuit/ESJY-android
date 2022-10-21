@@ -4,31 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register">
+    tools:context=".list">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
         <TextView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="这是注册页面"
+            android:text="这是列表页面"
 
             ></TextView>
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="初始界面"
-            android:onClick="enterMainActivity"
+            android:text="详情页面"
+            android:onClick="enterDetail"
             ></Button>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="登录界面"
-            android:onClick="enterLogin"
-            ></Button>
+
 
 
 

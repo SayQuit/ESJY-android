@@ -20,7 +20,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="List界面"
+            android:text="首页"
             android:onClick="enterMain"
             ></Button>
 
@@ -37,9 +37,11 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="详情页面"
-            android:onClick="enterDetail"
+            android:text="登陆成功"
+            android:onClick="enterLoginSuccess"
             ></Button>
+
+
 
 
     </LinearLayout>

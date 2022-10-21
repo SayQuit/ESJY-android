@@ -72,12 +72,6 @@ public class MainActivity extends AppCompatActivity {
         }).start();
 
         System.out.println("开启子线程请求网络");
-
-
-
-
-
-
     }
 
     public void enterLogin(View v)  {
@@ -101,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this,register.class);
         startActivity(intent);
     }
-    public void enterDetail(View v){
+    public void enterMain(View v){
         Intent intent=new Intent();
-        intent.setClass(this,detail.class);
+        intent.setClass(this,Main.class);
         startActivity(intent);
     }
 }
