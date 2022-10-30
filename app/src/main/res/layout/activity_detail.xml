@@ -6,22 +6,195 @@
     android:layout_height="match_parent"
     tools:context=".detail">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="这是商品详情页面"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
-            ></TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/food1"
+                android:scaleType="fitXY"
+                android:padding="10dp"
+                ></ImageView>
+            <TextView
+                android:layout_margin="10px"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="￥100"
+                android:textSize="30dp"
+                android:textColor="#eb4450"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                ></TextView>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                android:textColor="@color/black"></TextView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                >
+                <ImageButton
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/good"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"
+                    ></ImageButton>
+                <ImageButton
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/collect"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"></ImageButton>
+                <ImageButton
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/comment"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"></ImageButton>
+                <ImageButton
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/car"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"></ImageButton>
+            </GridLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+                    <EditText
+                        android:layout_width="230dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        ></EditText>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="添加评论"
+                        ></Button>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="用户1:"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
+                        android:textColor="@color/black"
+                        >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="用户2:"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
+                        android:textColor="@color/black"
+                        >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="用户3:"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
+                        android:textColor="@color/black"
+                        >
+                    </TextView>
+                </LinearLayout>
 
 
 
 
-    </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
