@@ -1,11 +1,15 @@
 package com.example.jy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Base64;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,6 +19,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import util.NetUtil;
 
 public class list extends AppCompatActivity {
 
@@ -47,4 +53,10 @@ public class list extends AppCompatActivity {
         intent.putExtra("param",s);
         startActivity(intent);
     }
+
+
+
+
+
+
 }

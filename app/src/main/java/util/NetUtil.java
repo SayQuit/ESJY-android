@@ -62,7 +62,7 @@ public class NetUtil {
     }
 
     public static String getReq(String req) {
-        String BaseUrl = "http://39.108.224.155";
+        String BaseUrl = "http://39.108.8.211";
         String realUrl = BaseUrl+req;
 //        System.out.println(realUrl);
         return doGet(realUrl);

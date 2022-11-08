@@ -31,9 +31,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        this.testReq();
+//        this.testReq();
 
     }
+
+
+
+
+
+
+
+
+
+
     private Handler mHandler = new Handler(Looper.myLooper()){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -49,10 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-
-
-
 
     public String test(){
         return NetUtil.getReq("/user/test");
@@ -73,6 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println("开启子线程请求网络");
     }
+
+
+
+
+
+
+
+
+
+
+
 
     public void enterLogin(View v)  {
 
