@@ -20,6 +20,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import util.NetUtil;
+import util.ParamsNetUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-//        this.testReq();
+        this.testReq();
 
     }
+
+
 
 
 
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (msg.what == 0) {
                 String strData = (String) msg.obj;
-                System.out.println("收到消息");
+//                System.out.println("收到消息");
                 System.out.println(strData);
 
 //                Toast.makeText(MainActivity.this,"主线程收到来自网络的消息啦！",Toast.LENGTH_SHORT).show();
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public String test(){
-        return NetUtil.getReq("/user/test");
+        return ParamsNetUtil.getReq("/user/posttest","?test=jkl&wh=123","POST");
     }
     public void testReq(){
 
@@ -69,15 +72,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 String stringFromNet = test();
+
+                System.out.println(stringFromNet);
+
                 Message message = new Message();
                 message.what = 0;
                 message.obj = stringFromNet;
                 mHandler.sendMessage(message);
 
+
             }
         }).start();
 
-        System.out.println("开启子线程请求网络");
+//        System.out.println("开启子线程请求网络");
     }
 
 
