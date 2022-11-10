@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
     public String test(){
         return ParamsNetUtil.getReq("/user/posttest","?test=jkl&wh=123","POST");
     }
@@ -86,14 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        System.out.println("开启子线程请求网络");
     }
-
-
-
-
-
-
-
-
 
 
 

@@ -22,7 +22,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:tag="0"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -52,7 +54,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:tag="1" />
 
     <TextView
         android:id="@+id/textView2"
@@ -82,7 +85,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:srcCompat="@android:drawable/arrow_up_float" />
+        tools:srcCompat="@android:drawable/arrow_up_float"
+        android:tag="2" />
 
     <TextView
         android:id="@+id/textView3"
@@ -111,7 +115,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:srcCompat="@android:drawable/arrow_down_float" />
+        tools:srcCompat="@android:drawable/arrow_down_float"
+        android:tag="3" />
 
     <TextView
         android:id="@+id/textView4"
@@ -139,7 +144,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        android:tag="4" />
 
     <TextView
         android:id="@+id/textView5"
@@ -168,7 +174,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="238dp" />
+        tools:layout_editor_absoluteY="238dp"
+        android:tag="5" />
 
     <TextView
         android:id="@+id/textView6"
@@ -197,7 +204,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="406dp" />
+        tools:layout_editor_absoluteY="406dp"
+        android:tag="6" />
 
     <TextView
         android:id="@+id/textView7"
@@ -225,7 +233,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-        tools:layout_editor_absoluteY="406dp" />
+        tools:layout_editor_absoluteY="406dp"
+        android:tag="7" />
 
     <TextView
         android:id="@+id/textView8"
@@ -254,7 +263,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="405dp" />
+        tools:layout_editor_absoluteY="405dp"
+        android:tag="8" />
 
     <TextView
         android:id="@+id/textView9"

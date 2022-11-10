@@ -63,7 +63,7 @@ public class ParamsNetUtil {
     public static String getReq(String req,String params,String way) {
         String BaseUrl = "http://39.108.8.211";
         String realUrl = BaseUrl+req+params;
-        System.out.println(realUrl);
+//        System.out.println(realUrl);
         return Request(realUrl,way);
     }
 }

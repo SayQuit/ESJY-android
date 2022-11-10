@@ -34,7 +34,10 @@ public class classify extends AppCompatActivity {
         this.getReq();
     }
     public void enterList(View v){
+        int index = Integer.parseInt(v.getTag().toString());
         Intent intent=new Intent();
+        String pid=this.id[index];
+        intent.putExtra("pid",pid);
         intent.setClass(this,list.class);
         startActivity(intent);
     }
@@ -82,10 +85,11 @@ public class classify extends AppCompatActivity {
         this.id[index]=id;
 
     }
+    private void visibilityNone(int index){
+        this.img[index].setVisibility(View.INVISIBLE);
+        this.txt[index].setVisibility(View.INVISIBLE);
 
-
-
-
+    }
     private Handler mHandler = new Handler(Looper.myLooper()){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -93,7 +97,7 @@ public class classify extends AppCompatActivity {
 
             if (msg.what == 0) {
                 String strData = (String) msg.obj;
-                System.out.println(txt[0]);
+//                System.out.println(txt[0]);
 
 
                 try {
@@ -101,17 +105,22 @@ public class classify extends AppCompatActivity {
                     String goodlist=json.optString("goodlist");
 
                     JSONArray array = new JSONArray(goodlist);
-                    System.out.println(array);
+//                    System.out.println(array);
 
-                    for(int i=0;i<array.length();i++){
-                        JSONObject jsonobject = array.getJSONObject(i);
-                        String id = jsonobject.getString("id");
-                        String name = jsonobject.getString("name");
-                        String icon = jsonobject.getString("icon");
+                    for(int i=0;i<9;i++){
+                        if(i<array.length()){
+                            JSONObject jsonobject = array.getJSONObject(i);
+                            String id = jsonobject.getString("id");
+                            String name = jsonobject.getString("name");
+                            String icon = jsonobject.getString("icon");
 
-                        setImg(i,icon);
-                        setTxt(i,name);
-                        setId(i,id);
+                            setImg(i,icon);
+                            setTxt(i,name);
+                            setId(i,id);
+                        }
+                        else{
+                            visibilityNone(i);
+                        }
 
 
 
@@ -130,7 +139,6 @@ public class classify extends AppCompatActivity {
 
         }
     };
-
     public String get(){
         return NetUtil.getReq("/goodlist/get");
     }

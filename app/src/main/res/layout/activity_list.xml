@@ -18,25 +18,28 @@
             android:layout_height="100dp"
             android:orientation="horizontal"
             android:layout_marginBottom="20dp"
-
+            android:tag="0"
+            android:onClick="enterDetail"
             >
             <ImageButton
-                android:id="@+id/list_img_1"
+                android:id="@+id/listimg1"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/dog"
                 android:scaleType="fitXY"
                 android:background="#FFFFFF"
-                android:onClick="enterDetail"
+
                 >
             </ImageButton>
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/listcont1"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
@@ -45,6 +48,7 @@
                     >
                 </TextView>
                 <TextView
+                    android:id="@+id/listprice1"
                     android:layout_margin="10px"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -60,8 +64,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:tag="1"
+            android:onClick="enterDetail">
             <ImageButton
+                android:id="@+id/listimg2"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/dog"
@@ -76,6 +83,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/listcont2"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
@@ -83,6 +91,7 @@
                     android:textColor="@color/black">
                 </TextView>
                 <TextView
+                    android:id="@+id/listprice2"
                     android:layout_margin="10px"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -98,8 +107,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:tag="2"
+            android:onClick="enterDetail">
             <ImageButton
+                android:id="@+id/listimg3"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/dog"
@@ -108,12 +120,14 @@
                 >
             </ImageButton>
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/listcont3"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
@@ -121,6 +135,7 @@
                     android:textColor="@color/black">
                 </TextView>
                 <TextView
+                    android:id="@+id/listprice3"
                     android:layout_margin="10px"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -136,8 +151,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:tag="3"
+            android:onClick="enterDetail">
             <ImageButton
+                android:id="@+id/listimg4"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/dog"
@@ -152,6 +170,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/listcont4"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
@@ -159,6 +178,7 @@
                     android:textColor="@color/black">
                 </TextView>
                 <TextView
+                    android:id="@+id/listprice4"
                     android:layout_margin="10px"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -174,8 +194,12 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:tag="4"
+            android:onClick="enterDetail"
+            >
             <ImageButton
+                android:id="@+id/listimg5"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/dog"
@@ -190,6 +214,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/listcont5"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
@@ -197,6 +222,7 @@
                     android:textColor="@color/black">
                 </TextView>
                 <TextView
+                    android:id="@+id/listprice5"
                     android:layout_margin="10px"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -207,6 +233,16 @@
                 </TextView>
             </LinearLayout>
         </LinearLayout>
+
+
+
+
+
+
+
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -24,10 +24,11 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="250dp"
                 android:src="@drawable/food1"
                 android:scaleType="fitXY"
                 android:padding="10dp"
+                android:id="@+id/detailimg"
                 ></ImageView>
             <TextView
                 android:layout_margin="10px"
@@ -38,6 +39,7 @@
                 android:textColor="#eb4450"
                 android:paddingLeft="20dp"
                 android:textStyle="bold"
+                android:id="@+id/detailprice"
                 ></TextView>
             <TextView
                 android:layout_marginLeft="20dp"
@@ -46,7 +48,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                android:textColor="@color/black"></TextView>
+                android:textColor="@color/black"
+                android:id="@+id/detailtxt"
+                ></TextView>
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -55,6 +59,7 @@
                 android:padding="20dp"
                 >
                 <ImageButton
+                    android:id="@+id/detailgood"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:layout_width="90dp"
@@ -62,38 +67,106 @@
                     android:src="@drawable/good"
                     android:scaleType="fitXY"
                     android:background="@color/white"
+                    android:onClick="goodClick"
                     ></ImageButton>
                 <ImageButton
+                    android:id="@+id/detailcollect"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:layout_width="90dp"
                     android:layout_height="50dp"
                     android:src="@drawable/collect"
                     android:scaleType="fitXY"
-                    android:background="@color/white"></ImageButton>
+                    android:background="@color/white"
+                    android:onClick="collectClick"
+                    ></ImageButton>
                 <ImageButton
+                    android:id="@+id/detailcomment"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:layout_width="90dp"
                     android:layout_height="50dp"
                     android:src="@drawable/comment"
                     android:scaleType="fitXY"
-                    android:background="@color/white"></ImageButton>
+                    android:background="@color/white"
+                    android:onClick="commentClick"
+                    ></ImageButton>
                 <ImageButton
+                    android:id="@+id/detailcar"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:layout_width="90dp"
                     android:layout_height="50dp"
                     android:src="@drawable/car"
                     android:scaleType="fitXY"
-                    android:background="@color/white"></ImageButton>
+                    android:background="@color/white"
+                    android:onClick="carClick"
+                    ></ImageButton>
+            </GridLayout>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                >
+                <TextView
+                    android:id="@+id/detailgoodnum"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:text="0"
+                    android:textSize="28dp"
+                    android:textColor="#EB4450"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/detailcollectnum"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:text="0"
+                    android:textSize="28dp"
+                    android:textColor="#EB4450"
+                    android:gravity="center"
+                    android:background="@color/white"></TextView>
+                <TextView
+                    android:id="@+id/detailcommentnum"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:text="0"
+                    android:textSize="28dp"
+                    android:textColor="#EB4450"
+                    android:gravity="center"
+                    android:background="@color/white"></TextView>
+                <TextView
+                    android:id="@+id/detailcarnum"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:text="0"
+                    android:textSize="28dp"
+                    android:textColor="#EB4450"
+                    android:gravity="center"
+                    android:background="@color/white"></TextView>
             </GridLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/commentBlock"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -105,15 +178,16 @@
                         android:layout_width="230dp"
                         android:layout_height="match_parent"
                         android:layout_marginRight="20dp"
+                        android:id="@+id/commentCont"
                         ></EditText>
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="添加评论"
+                        android:onClick="addComment"
                         ></Button>
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,9 +196,10 @@
                     >
 
                     <TextView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="用户1:"
+                        android:id="@+id/detailuser1"
                         >
                     </TextView>
                     <TextView
@@ -132,10 +207,10 @@
                         android:layout_height="wrap_content"
                         android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
                         android:textColor="@color/black"
+                        android:id="@+id/detailcomment1"
                         >
                     </TextView>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -143,9 +218,10 @@
                     android:padding="20dp"
                     >
                     <TextView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="用户2:"
+                        android:id="@+id/detailuser2"
                         >
                     </TextView>
                     <TextView
@@ -153,10 +229,10 @@
                         android:layout_height="wrap_content"
                         android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
                         android:textColor="@color/black"
+                        android:id="@+id/detailcomment2"
                         >
                     </TextView>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -164,9 +240,10 @@
                     android:padding="20dp"
                     >
                     <TextView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
-                        android:text="用户3:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户1:"
+                        android:id="@+id/detailuser3"
                         >
                     </TextView>
                     <TextView
@@ -174,8 +251,70 @@
                         android:layout_height="wrap_content"
                         android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
                         android:textColor="@color/black"
+                        android:id="@+id/detailcomment3"
                         >
                     </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户1:"
+                        android:id="@+id/detailuser4"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
+                        android:textColor="@color/black"
+                        android:id="@+id/detailcomment4"
+                        >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户1:"
+                        android:id="@+id/detailuser5"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论"
+                        android:textColor="@color/black"
+                        android:id="@+id/detailcomment5"
+                        >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:text="上一页"></Button>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:text="下一页"
+                        android:layout_marginLeft="200dp"
+                        ></Button>
+
                 </LinearLayout>
 
 
