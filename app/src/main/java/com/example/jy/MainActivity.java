@@ -19,6 +19,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import util.Account;
 import util.NetUtil;
 import util.ParamsNetUtil;
 
@@ -31,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Account application;
+//        application=(Account)getApplicationContext();
+//
+//        String account=application.getAccount();
+//        System.out.println(account);
 
-        this.testReq();
+
+
+
 
     }
 

@@ -21,6 +21,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import util.Account;
 import util.ParamsNetUtil;
 
 public class detail extends AppCompatActivity {
@@ -50,14 +51,25 @@ public class detail extends AppCompatActivity {
     TextView []commentList=new TextView[5];
     TextView []user=new TextView[5];
 
+    String account;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+
+        Account application;
+        application=(Account)getApplicationContext();
+        this.account=application.getAccount();
+
+
         this.init();
+
+
 
 
 
@@ -234,7 +246,7 @@ public class detail extends AppCompatActivity {
 
     }
     public String get(){
-        return ParamsNetUtil.getReq("/gooddetail/getDetail","?good="+this.id+"&user=46510384588","GET");
+        return ParamsNetUtil.getReq("/gooddetail/getDetail","?good="+this.id+"&user="+this.account,"GET");
     }
 
     private Handler carHandler = new Handler(Looper.myLooper()){
@@ -249,21 +261,23 @@ public class detail extends AppCompatActivity {
         }
     };
     public void carClick(View v){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String stringFromNet = car();
-                Message message = new Message();
-                message.what = 0;
-                message.obj = stringFromNet;
-                collectHandler.sendMessage(message);
+        if(this.account!="") {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String stringFromNet = car();
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = stringFromNet;
+                    collectHandler.sendMessage(message);
 
-            }
-        }).start();
+                }
+            }).start();
+        }
     }
     private String car(){
-        if(!this.carBool)return ParamsNetUtil.getReq("/car/add","?good="+this.id+"&user=46510384588","POST");
-        else return ParamsNetUtil.getReq("/car/cancel","?good="+this.id+"&user=46510384588","POST");
+        if(!this.carBool)return ParamsNetUtil.getReq("/car/add","?good="+this.id+"&user="+this.account,"POST");
+        else return ParamsNetUtil.getReq("/car/cancel","?good="+this.id+"&user="+this.account,"POST");
 
     }
 
@@ -279,21 +293,23 @@ public class detail extends AppCompatActivity {
         }
     };
     public void collectClick(View v){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String stringFromNet = collect();
-                Message message = new Message();
-                message.what = 0;
-                message.obj = stringFromNet;
-                collectHandler.sendMessage(message);
+        if(this.account!="") {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String stringFromNet = collect();
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = stringFromNet;
+                    collectHandler.sendMessage(message);
 
-            }
-        }).start();
+                }
+            }).start();
+        }
     }
     private String collect(){
-        if(!this.collectBool)return ParamsNetUtil.getReq("/collect/add","?good="+this.id+"&user=46510384588","POST");
-        else return ParamsNetUtil.getReq("/collect/cancel","?good="+this.id+"&user=46510384588","POST");
+        if(!this.collectBool)return ParamsNetUtil.getReq("/collect/add","?good="+this.id+"&user="+this.account,"POST");
+        else return ParamsNetUtil.getReq("/collect/cancel","?good="+this.id+"&user="+this.account,"POST");
 
     }
 
@@ -309,25 +325,27 @@ public class detail extends AppCompatActivity {
         }
     };
     public void goodClick(View v){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String stringFromNet = good();
-                Message message = new Message();
-                message.what = 0;
-                message.obj = stringFromNet;
-                goodHandler.sendMessage(message);
+        if(this.account!=""){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String stringFromNet = good();
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = stringFromNet;
+                    goodHandler.sendMessage(message);
 
-            }
-        }).start();
+                }
+            }).start();
+        }
 
 
 
 //        return ParamsNetUtil.getReq("/good/add","?good="+this.id+"&user=46510384588","POST");
     }
     private String good(){
-        if(!this.goodBool)return ParamsNetUtil.getReq("/like/add","?good="+this.id+"&user=46510384588","POST");
-        else return ParamsNetUtil.getReq("/like/cancel","?good="+this.id+"&user=46510384588","POST");
+        if(!this.goodBool)return ParamsNetUtil.getReq("/like/add","?good="+this.id+"&user="+this.account,"POST");
+        else return ParamsNetUtil.getReq("/like/cancel","?good="+this.id+"&user="+this.account,"POST");
 
     }
 
@@ -351,31 +369,37 @@ public class detail extends AppCompatActivity {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
+            System.out.println(msg);
 
             if (msg.what == 0) {
+
                 updateComment();
             }
 
         }
     };
     public void addComment(View v){
-        EditText e= findViewById(R.id.commentCont);
-        String cont=e.getText().toString();
-        e.setText("");
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String stringFromNet = comment(cont);
-                Message message = new Message();
-                message.what = 0;
-                message.obj = stringFromNet;
-                commentHandler.sendMessage(message);
+        if(this.account!=""){
+            EditText e= findViewById(R.id.commentCont);
+            String cont=e.getText().toString();
+            e.setText("");
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String stringFromNet = comment(cont);
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = stringFromNet;
+                    commentHandler.sendMessage(message);
 
-            }
-        }).start();
+                }
+            }).start();
+        }
+
+//        提示
     }
     private String comment(String cont){
-        return ParamsNetUtil.getReq("/comment/add","?good="+this.id+"&user=46510384588&cont="+cont,"POST");
+        return ParamsNetUtil.getReq("/comment/add","?good="+this.id+"&user="+this.account+"&cont="+cont,"POST");
 
     }
     private void updateComment(){
@@ -445,13 +469,14 @@ public class detail extends AppCompatActivity {
                 message.what = 0;
                 message.obj = stringFromNet;
                 updateCommentHandler.sendMessage(message);
+//                System.out.println(message);
 
             }
         }).start();
 
     }
     public String updateCommentGet(){
-        return ParamsNetUtil.getReq("/gooddetail/getDetail","?good="+this.id+"&user=46510384588","GET");
+        return ParamsNetUtil.getReq("/gooddetail/getDetail","?good="+this.id+"&user="+this.account,"GET");
     }
     private void updateCommentNum(String CommentNum){
         this.commentnum.setText(CommentNum);
