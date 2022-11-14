@@ -123,4 +123,10 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this,Main.class);
         startActivity(intent);
     }
+
+    public void enterCar(View v){
+        Intent intent=new Intent();
+        intent.setClass(this,shoppingCar.class);
+        startActivity(intent);
+    }
 }
