@@ -249,11 +249,13 @@
             android:layout_height="200dp">
 
             <Button
+                android:onClick="lastPage"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="上一页"></Button>
 
             <Button
+                android:onClick="nextPage"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="下一页"

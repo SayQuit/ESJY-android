@@ -21,6 +21,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".registerSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".shoppingCar"
+            android:exported="false" />
+        <activity
+            android:name=".User"
+            android:exported="false" />
+        <activity
             android:name=".classify"
             android:exported="false" />
         <activity

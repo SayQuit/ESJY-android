@@ -9,31 +9,105 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="这是注册页面"
-
-            ></TextView>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="初始界面"
-            android:onClick="enterMainActivity"
-            ></Button>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="登录界面"
-            android:onClick="enterLogin"
-            ></Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="昵称："
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/nickname"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="密码："
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="确认密码："
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/ack_psw"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="注册"></Button>
+
+            <Button
+                android:id="@+id/returnHome"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:text="返回首页"></Button>
+        </LinearLayout>
 
 
     </LinearLayout>

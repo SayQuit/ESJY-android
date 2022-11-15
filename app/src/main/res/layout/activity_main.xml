@@ -10,40 +10,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="这是初始页面"
-
-            ></TextView>
+        android:gravity="center">
 
         <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="登录界面"
-            android:onClick="enterLogin"
-            android:id="@+id/button"
-            ></Button>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="注册界面"
-            android:onClick="enterRegister"
-            ></Button>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="首页"
             android:onClick="enterMain"
+            android:layout_margin="30dp"
+
             ></Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="登录"
+            android:onClick="enterLogin"
+            android:id="@+id/button"
+            android:layout_margin="30dp"></Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="注册"
+            android:onClick="enterRegister"
+            android:layout_margin="30dp"
+
+            ></Button>
+
 
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

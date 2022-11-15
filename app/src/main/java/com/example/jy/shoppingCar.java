@@ -6,24 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Main extends AppCompatActivity {
+public class shoppingCar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_shopping_car);
     }
 
-
-    public void enterClassify(View v) {
-        Intent intent = new Intent();
-        intent.setClass(this, classify.class);
-        startActivity(intent);
-    }
-    public void enterUser(View v){
+    public void enterDetail(View v){
         Intent intent=new Intent();
-        intent.setClass(this,User.class);
+        intent.setClass(this,shoppingCar.class);
         startActivity(intent);
     }
-
 }

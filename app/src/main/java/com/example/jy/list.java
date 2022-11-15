@@ -36,6 +36,8 @@ public class list extends AppCompatActivity {
     TextView []price=new TextView[5];
     String []id=new String[5];
     String []base64=new String[5];
+    int page;
+    boolean isLast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class list extends AppCompatActivity {
         setContentView(R.layout.activity_list);
         Intent i = this.getIntent();
         this.pid=i.getStringExtra("pid");
+        this.page=1;
+//        this.isLast=false;
         this.init();
 
     }
@@ -104,6 +108,7 @@ public class list extends AppCompatActivity {
 
 
     private void setImg(int index,String img){
+
         this.img[index].setImageBitmap(base642Bitmap(img));
 
     }
@@ -127,6 +132,7 @@ public class list extends AppCompatActivity {
         this.txt[index].setVisibility(View.INVISIBLE);
         this.price[index].setVisibility(View.INVISIBLE);
 
+
     }
 
     private Handler mHandler = new Handler(Looper.myLooper()){
@@ -140,18 +146,16 @@ public class list extends AppCompatActivity {
                     JSONObject json = new JSONObject(strData);
 
                     String message=json.optString("message");
-//                    System.out.println(message);
                     if(message.equals("fail")){
                         for(int i=0;i<5;i++){
                             visibilityNone(i);
                         }
                         return;
                     }
-
+                    isLast=json.optBoolean("isLast");
                     String goodDetailList=json.optString("goodDetailList");
 
                     JSONArray array = new JSONArray(goodDetailList);
-//                    System.out.println(array);
 
                     for(int i=0;i<5;i++){
                         if(i<array.length()){
@@ -171,7 +175,6 @@ public class list extends AppCompatActivity {
                             setPrice(i,"￥"+price);
                         }
                         else{
-
                             visibilityNone(i);
                         }
 
@@ -188,8 +191,18 @@ public class list extends AppCompatActivity {
         }
     };
     public String get(){
-        return ParamsNetUtil.getReq("/gooddetail/get","?pid="+this.pid,"GET");
+        return ParamsNetUtil.getReq("/gooddetail/get","?pid="+this.pid+"&page="+String.valueOf(this.page),"GET");
     }
+    public void nextPage(View v){
+        if(!this.isLast)this.page=this.page+1;
+        this.getReq();
+
+    }
+    public void lastPage(View v){
+        if(this.page>1)this.page=this.page-1;
+        this.getReq();
+    }
+
     public void getReq(){
 
         new Thread(new Runnable() {

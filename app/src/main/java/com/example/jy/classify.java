@@ -20,16 +20,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import util.NetUtil;
+import util.ParamsNetUtil;
 
 public class classify extends AppCompatActivity {
 
     ImageButton []img=new ImageButton[9];
     TextView []txt=new TextView[9];
     String []id=new String[9];
+    int page;
+    boolean isLast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classify);
+        this.page=1;
         this.init();
         this.getReq();
     }
@@ -73,7 +77,6 @@ public class classify extends AppCompatActivity {
         return mBitmap;
     }
     private void setImg(int index,String img){
-//        Bitmap mBitmap = BitmapFactory.decodeFile(img);
         this.img[index].setImageBitmap(base642Bitmap(img));
 
     }
@@ -103,6 +106,7 @@ public class classify extends AppCompatActivity {
                 try {
                     JSONObject json = new JSONObject(strData);
                     String goodlist=json.optString("goodlist");
+                    isLast=json.optBoolean("isLast");
 
                     JSONArray array = new JSONArray(goodlist);
 //                    System.out.println(array);
@@ -140,7 +144,7 @@ public class classify extends AppCompatActivity {
         }
     };
     public String get(){
-        return NetUtil.getReq("/goodlist/get");
+        return ParamsNetUtil.getReq("/goodlist/get","?page="+String.valueOf(this.page),"GET");
     }
     public void getReq(){
 
@@ -156,5 +160,14 @@ public class classify extends AppCompatActivity {
             }
         }).start();
 
+    }
+    public void nextPage(View v){
+        if(!this.isLast)this.page=this.page+1;
+        this.getReq();
+
+    }
+    public void lastPage(View v){
+        if(this.page>1)this.page=this.page-1;
+        this.getReq();
     }
 }

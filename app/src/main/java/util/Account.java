@@ -4,10 +4,12 @@ import android.app.Application;
 
 public class Account extends Application {
     static String account;
+    static String name;
 
     public void onCreate(){  //创建该类
         super.onCreate();
         this.account="";
+        this.name="";
 
     }
 
@@ -16,5 +18,11 @@ public class Account extends Application {
     }
     public String getAccount(){
         return account;
+    }
+    public void setName(String newName){
+        this.name=newName;
+    }
+    public String getName(){
+        return name;
     }
 }

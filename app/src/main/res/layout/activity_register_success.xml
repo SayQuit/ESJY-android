@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginSuccess">
+    tools:context=".registerSuccess">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +24,7 @@
                 android:textSize="15sp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:text="登陸成功" />
+                android:text="注册成功！您的账号为 " />
 
             <TextView
                 android:id="@+id/account"
@@ -43,14 +44,12 @@
             android:layout_marginTop="50dp">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/gotoLogin"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:text="用戶頁面"></Button>
+                android:text="前往登陆"></Button>
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/returnHome"
                 android:layout_width="300dp"
                 android:layout_height="70dp"

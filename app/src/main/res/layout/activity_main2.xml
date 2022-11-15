@@ -36,7 +36,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:onClick="enterClassify"
                 android:orientation="vertical">
                 <ImageButton
                     android:id="@+id/main_classify"
@@ -46,13 +45,17 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
                     android:onClick="enterClassify"
-                    app:srcCompat="@android:drawable/ic_dialog_dialer" />
+                    android:background="@color/white"
+                    android:src="@drawable/classify"
+                    android:scaleType="fitXY"
+                    ></ImageButton>
                 <TextView
                     android:id="@+id/textView_classify"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:text="分类"
+                    android:background="@color/white"
                     android:textDirection="locale" />
             </LinearLayout>
 
@@ -67,20 +70,33 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
-                    app:srcCompat="@android:drawable/ic_menu_compass" />
+                    android:background="@color/white"
+                    android:src="@drawable/user"
+                    android:scaleType="fitXY"
+                    android:onClick="enterUser"/>
+                <TextView
+                    android:id="@+id/textView_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="用户"
+                    android:background="@color/white"
+                    android:textDirection="locale" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:orientation="vertical">
+
                 <ImageButton
                     android:id="@+id/button_ttt"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
+                    android:background="@color/white"
                     app:srcCompat="@android:drawable/ic_menu_compass" />
             </LinearLayout>
 
@@ -94,6 +110,7 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
+                    android:background="@color/white"
                     android:layout_marginEnd="25dp"
                     app:srcCompat="@android:drawable/ic_dialog_dialer" />
             </LinearLayout>
