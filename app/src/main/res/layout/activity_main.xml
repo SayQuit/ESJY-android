@@ -22,6 +22,7 @@
             ></Button>
 
         <Button
+<<<<<<< HEAD
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="登录"
@@ -40,6 +41,13 @@
 
 
 
+=======
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="购物车"
+            android:onClick="enterCar"
+            ></Button>
+>>>>>>> d474137fbcae167e45d8a5cad955e5c864c23ece
     </LinearLayout>
 
 

@@ -124,9 +124,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+<<<<<<< HEAD
     public void enterUser(View v){
         Intent intent=new Intent();
         intent.setClass(this,User.class);
+=======
+    public void enterCar(View v){
+        Intent intent=new Intent();
+        intent.setClass(this,shoppingCar.class);
+>>>>>>> d474137fbcae167e45d8a5cad955e5c864c23ece
         startActivity(intent);
     }
 }
