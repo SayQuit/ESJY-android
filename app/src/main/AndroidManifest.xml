@@ -21,7 +21,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".registerSuccess"
             android:exported="false" />
         <activity
@@ -31,11 +30,6 @@
             android:name=".User"
             android:exported="false" />
         <activity
-=======
-            android:name=".shoppingCar"
-            android:exported="false" />
-        <activity
->>>>>>> d474137fbcae167e45d8a5cad955e5c864c23ece
             android:name=".classify"
             android:exported="false" />
         <activity

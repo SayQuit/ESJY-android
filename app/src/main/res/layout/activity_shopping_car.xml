@@ -15,11 +15,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="600dp"
-=======
-            android:layout_height="530dp"
->>>>>>> d474137fbcae167e45d8a5cad955e5c864c23ece
             android:scrollbars="none"
             >
             <LinearLayout
@@ -142,19 +138,7 @@
                             android:textColor="@color/black"
                             >
                         </TextView>
-<<<<<<< HEAD
 
-=======
-                        <TextView
-                            android:layout_margin="10px"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:text="￥100"
-                            android:textSize="18dp"
-                            android:textColor="#eb4450"
-                            >
-                        </TextView>
->>>>>>> d474137fbcae167e45d8a5cad955e5c864c23ece
                     </LinearLayout>
                 </LinearLayout>
 
