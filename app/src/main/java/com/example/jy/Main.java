@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import util.Account;
+
 public class Main extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,11 @@ public class Main extends AppCompatActivity {
         startActivity(intent);
     }
     public void enterUser(View v){
+        Account application;
+        application=(Account)getApplicationContext();
+        if(application.getAccount().equals("")){
+            return;
+        }
         Intent intent=new Intent();
         intent.setClass(this,User.class);
         startActivity(intent);

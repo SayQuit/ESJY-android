@@ -2,7 +2,9 @@ package com.example.jy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import util.Account;
@@ -32,8 +34,12 @@ public class User extends AppCompatActivity {
 
     }
 
-    public void init(){
+    public void click(View v){
 
+        Intent intent=new Intent();
+        intent.putExtra("interface",v.getTag().toString());
+        intent.setClass(this,list.class);
+        startActivity(intent);
     }
 
 }

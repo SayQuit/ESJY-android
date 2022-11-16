@@ -53,6 +53,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/order"
         android:background="#FFF"
+        android:tag="/user/order"
+        android:onClick="click"
         ></ImageButton>
 
     <ImageButton
@@ -64,6 +66,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/shop"
         android:background="#FFF"
+        android:tag="/user/shop"
+        android:onClick="click"
         ></ImageButton>
 
     <TextView
@@ -97,6 +101,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/collect1"
         android:background="#FFF"
+        android:tag="/user/like"
+        android:onClick="click"
         ></ImageButton>
 
     <ImageButton
@@ -109,6 +115,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/car1"
         android:background="#FFF"
+        android:tag="/user/car"
+        android:onClick="click"
         ></ImageButton>
 
     <TextView
