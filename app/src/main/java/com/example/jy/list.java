@@ -28,7 +28,9 @@ import util.NetUtil;
 import util.ParamsNetUtil;
 
 public class list extends AppCompatActivity {
-    String interface1;
+
+    //    public ImageButton img1;
+    String pid;
     ImageButton []img=new ImageButton[5];
     TextView []txt=new TextView[5];
     TextView []price=new TextView[5];
@@ -42,9 +44,9 @@ public class list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         Intent i = this.getIntent();
-        this.interface1=i.getStringExtra("interface");
-        System.out.println(interface1);
+        this.pid=i.getStringExtra("pid");
         this.page=1;
+//        this.isLast=false;
         this.init();
 
     }
@@ -55,16 +57,22 @@ public class list extends AppCompatActivity {
         return mBitmap;
     }
     public void init(){
+
+
+
         this.img[0]=findViewById(R.id.listimg1);
         this.img[1]=findViewById(R.id.listimg2);
         this.img[2]=findViewById(R.id.listimg3);
         this.img[3]=findViewById(R.id.listimg4);
         this.img[4]=findViewById(R.id.listimg5);
+
+
         this.txt[0]=findViewById(R.id.listcont1);
         this.txt[1]=findViewById(R.id.listcont2);
         this.txt[2]=findViewById(R.id.listcont3);
         this.txt[3]=findViewById(R.id.listcont4);
         this.txt[4]=findViewById(R.id.listcont5);
+
         this.price[0]=findViewById(R.id.listprice1);
         this.price[1]=findViewById(R.id.listprice2);
         this.price[2]=findViewById(R.id.listprice3);
@@ -75,7 +83,7 @@ public class list extends AppCompatActivity {
 //            visibilityNone(i);
 //        }
 
-//        this.getReq();
+        this.getReq();
 
 
     }
@@ -127,91 +135,89 @@ public class list extends AppCompatActivity {
 
     }
 
-//    private Handler mHandler = new Handler(Looper.myLooper()){
-//        @Override
-//        public void handleMessage(@NonNull Message msg) {
-//            super.handleMessage(msg);
-//
-//            if (msg.what == 0) {
-//                String strData = (String) msg.obj;
-//                try {
-//                    JSONObject json = new JSONObject(strData);
-//
-//                    String message=json.optString("message");
-//                    if(message.equals("fail")){
-//                        for(int i=0;i<5;i++){
-//                            visibilityNone(i);
-//                        }
-//                        return;
-//                    }
-//                    isLast=json.optBoolean("isLast");
-//                    String goodDetailList=json.optString("goodDetailList");
-//
-//                    JSONArray array = new JSONArray(goodDetailList);
-//
-//                    for(int i=0;i<5;i++){
-//                        if(i<array.length()){
-//                            JSONObject jsonobject = array.getJSONObject(i);
-//                            String id = jsonobject.getString("id");
-//                            String cont = jsonobject.getString("name");
-//                            String logo = jsonobject.getString("logo");
-//                            String price = jsonobject.getString("price");
-//
-//
-//
-//
-//                            setBase64(i,logo);
-//                            setImg(i,logo);
-//                            setTxt(i,cont);
-//                            setId(i,id);
-//                            setPrice(i,"￥"+price);
-//                        }
-//                        else{
-//                            visibilityNone(i);
-//                        }
-//
-//
-//
-//
-//                    }
-//
-//                } catch(JSONException e){
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//        }
-//    };
-//    public String get(){
-//        return
-//
-//        ParamsNetUtil.getReq("/gooddetail/get","?pid="+this.pid+"&page="+String.valueOf(this.page),"GET");
-//    }
-//    public void nextPage(View v){
-//        if(!this.isLast)this.page=this.page+1;
-//        this.getReq();
-//
-//    }
-//    public void lastPage(View v){
-//        if(this.page>1)this.page=this.page-1;
-//        this.getReq();
-//    }
+    private Handler mHandler = new Handler(Looper.myLooper()){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
 
-//    public void getReq(){
-//
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                String stringFromNet = get();
-//                Message message = new Message();
-//                message.what = 0;
-//                message.obj = stringFromNet;
-//                mHandler.sendMessage(message);
-//
-//            }
-//        }).start();
-//
-//    }
+            if (msg.what == 0) {
+                String strData = (String) msg.obj;
+                try {
+                    JSONObject json = new JSONObject(strData);
+
+                    String message=json.optString("message");
+                    if(message.equals("fail")){
+                        for(int i=0;i<5;i++){
+                            visibilityNone(i);
+                        }
+                        return;
+                    }
+                    isLast=json.optBoolean("isLast");
+                    String goodDetailList=json.optString("goodDetailList");
+
+                    JSONArray array = new JSONArray(goodDetailList);
+
+                    for(int i=0;i<5;i++){
+                        if(i<array.length()){
+                            JSONObject jsonobject = array.getJSONObject(i);
+                            String id = jsonobject.getString("id");
+                            String cont = jsonobject.getString("name");
+                            String logo = jsonobject.getString("logo");
+                            String price = jsonobject.getString("price");
+
+
+
+
+                            setBase64(i,logo);
+                            setImg(i,logo);
+                            setTxt(i,cont);
+                            setId(i,id);
+                            setPrice(i,"￥"+price);
+                        }
+                        else{
+                            visibilityNone(i);
+                        }
+
+
+
+
+                    }
+
+                } catch(JSONException e){
+                    e.printStackTrace();
+                }
+            }
+
+        }
+    };
+    public String get(){
+        return ParamsNetUtil.getReq("/gooddetail/get","?pid="+this.pid+"&page="+String.valueOf(this.page),"GET");
+    }
+    public void nextPage(View v){
+        if(!this.isLast)this.page=this.page+1;
+        this.getReq();
+
+    }
+    public void lastPage(View v){
+        if(this.page>1)this.page=this.page-1;
+        this.getReq();
+    }
+
+    public void getReq(){
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String stringFromNet = get();
+                Message message = new Message();
+                message.what = 0;
+                message.obj = stringFromNet;
+                mHandler.sendMessage(message);
+
+            }
+        }).start();
+
+    }
 
 
 

@@ -38,7 +38,7 @@ public class User extends AppCompatActivity {
 
         Intent intent=new Intent();
         intent.putExtra("interface",v.getTag().toString());
-        intent.setClass(this,list.class);
+        intent.setClass(this,shoppingCar.class);
         startActivity(intent);
     }
 

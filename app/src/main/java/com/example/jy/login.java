@@ -69,6 +69,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             if (msg.what == 0) {
                 String strData = (String) msg.obj;
                 JSONObject json = null;
+                System.out.println(strData);
                 try {
                     json = new JSONObject(strData);
                     String message = json.getString("message");
