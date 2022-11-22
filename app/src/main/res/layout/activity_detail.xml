@@ -47,10 +47,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                android:text="物品描述"
                 android:textColor="@color/black"
                 android:id="@+id/detailtxt"
                 ></TextView>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="260dp"
+                android:text="立即购买"
+                android:onClick="buy"
+                ></Button>
 
             <GridLayout
                 android:layout_width="match_parent"

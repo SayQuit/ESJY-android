@@ -24,6 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import util.Account;
 import util.NetUtil;
 import util.ParamsNetUtil;
 
@@ -202,7 +203,14 @@ public class list extends AppCompatActivity {
         if(this.page>1)this.page=this.page-1;
         this.getReq();
     }
-
+    public void enterAddDetail(View v){
+        Account application;
+        application = (Account) getApplicationContext();
+        if(application.getAccount().equals(""))return;
+        Intent intent=new Intent();
+        intent.setClass(this,goodDetailAdd.class);
+        startActivity(intent);
+    }
     public void getReq(){
 
         new Thread(new Runnable() {

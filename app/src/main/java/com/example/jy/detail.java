@@ -487,4 +487,56 @@ public class detail extends AppCompatActivity {
 
 
 
+
+
+
+
+//    下面需要测试
+
+
+    public void buy(View v){
+
+        if(this.account=="")return;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String stringFromNet = buyPost();
+                Message message = new Message();
+                message.what = 0;
+                message.obj = stringFromNet;
+                buyHandler.sendMessage(message);
+//                System.out.println(message);
+
+            }
+        }).start();
+    }
+
+    public String buyPost(){
+        return ParamsNetUtil.getReq("/order/buy","?good="+this.id+"&user="+this.account,"POST");
+    }
+
+    private Handler buyHandler = new Handler(Looper.myLooper()){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+
+            if (msg.what == 0) {
+                String strData = (String) msg.obj;
+
+                System.out.println(strData);
+
+
+
+
+
+
+            }
+
+        }
+    };
+
+
+
+
+
 }

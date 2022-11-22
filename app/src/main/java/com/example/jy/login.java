@@ -44,14 +44,14 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         if (view.getId() == R.id.login) {
             EditText editText1 = findViewById(R.id.username);
             String username = editText1.getText().toString();
-            System.out.println("username = " + username);
+//            System.out.println("username = " + username);
             EditText editText2 = findViewById(R.id.password);
             String password = editText2.getText().toString();
-            System.out.println("password = " + password);
+//            System.out.println("password = " + password);
 
             String params = "?account=" + username + "&psw=" + password;
 
-            testReq(params);
+            handleLogin(params);
         }
         if (view.getId() == R.id.returnHome) {
             Intent intent = new Intent(this, MainActivity.class);
@@ -82,7 +82,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                         application.setName(name);
 
 
-                        System.out.println("登陸成功登陸成功登陸成功登陸成功");
+                        System.out.println("登录成功");
                         Intent intent=new Intent(login.this, loginSuccess.class);
                         startActivity(intent);
                     }
@@ -116,16 +116,16 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         }
     };
 
-    public String register(String params) {
+    public String login(String params) {
         return ParamsNetUtil.getReq("/user/login", params, "POST");
     }
 
-    public void testReq(String params) {
+    public void handleLogin(String params) {
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String stringFromNet = register(params);
+                String stringFromNet = login(params);
 
                 System.out.println(stringFromNet);
 

@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_classify.xml" value="0.2" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_detail.xml" value="0.264" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_good_detail_add.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_good_list_add.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_list.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_login.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_login_success.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_main2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_register.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/activity_user.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/x5012/Desktop/ESJY-main/app/src/main/res/layout/simple_list_item_1.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/x5012/Desktop/JY/app/src/main/res/layout/activity_user.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/x5012/JY/app/src/main/res/layout/activity_classify.xml" value="0.2" />
         <entry key="..\:/Users/x5012/JY/app/src/main/res/layout/activity_detail.xml" value="0.10435663627152988" />

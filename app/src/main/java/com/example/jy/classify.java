@@ -19,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import util.Account;
 import util.NetUtil;
 import util.ParamsNetUtil;
 
@@ -44,7 +45,14 @@ public class classify extends AppCompatActivity {
         intent.putExtra("pid",pid);
         intent.setClass(this,list.class);
         startActivity(intent);
+    };
+    public void enterAddClassify(View v){
+
+        Intent intent=new Intent();
+        intent.setClass(this,goodListAdd.class);
+        startActivity(intent);
     }
+
     void init(){
         this.img[0]=findViewById(R.id.imageButton);
         this.img[1]=findViewById(R.id.imageButton2);

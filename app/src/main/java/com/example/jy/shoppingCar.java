@@ -64,41 +64,42 @@ public class shoppingCar extends AppCompatActivity {
     }
 
     public String get(){
+        System.out.println(this.interface1);
         return ParamsNetUtil.getReq(this.interface1,"?user="+this.account+"&page="+this.page,"GET");
     }
 
     private Handler mHandler = new Handler(Looper.myLooper()){
-               @Override
-               public void handleMessage(@NonNull Message msg) {
-                   super.handleMessage(msg);
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
 
-                   if (msg.what == 0) {
-                       String strData = (String) msg.obj;
-                       System.out.println(strData);
+            if (msg.what == 0) {
+                String strData = (String) msg.obj;
+                System.out.println(strData);
 
-                       try{
-                           JSONObject json = new JSONObject(strData);
-                           String car=json.optString("car");
-                           isLast=json.optBoolean("isLast");
-                           array = new JSONArray(car);
-                           System.out.println(array);
+                try{
+                    JSONObject json = new JSONObject(strData);
+                    String car=json.optString("goodlist");
+                    isLast=json.optBoolean("isLast");
+                    array = new JSONArray(car);
+                    System.out.println(array);
 
-                           LinearLayout commoditiesPage = findViewById(R.id.commoditiesPage);
-                           int len = array.length();
+                    LinearLayout commoditiesPage = findViewById(R.id.commoditiesPage);
+                    int len = array.length();
 
-                           for(int i=0;i<len;i++){
-                               JSONObject Obj = array.getJSONObject(i);
-                               addCommodityView(commoditiesPage,i,Obj);
-                           }
+                    for(int i=0;i<len;i++){
+                        JSONObject Obj = array.getJSONObject(i);
+                        addCommodityView(commoditiesPage,i,Obj);
+                    }
 
-                       } catch(JSONException e) {
-                           e.printStackTrace();
-                       }
+                } catch(JSONException e) {
+                    e.printStackTrace();
+                }
 
-                   }
+            }
 
-               }
-           };
+        }
+    };
 
     private static Bitmap base642Bitmap(String base64) {
         byte[] decode = Base64.decode(base64.split(",")[1],Base64.DEFAULT);

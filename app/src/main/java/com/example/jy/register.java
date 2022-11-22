@@ -59,7 +59,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
 
                 //生成请求数据所需要的params部分
                 String params = "?name=" + nickname + "&psw=" + password;
-                testReq(params);
+                handleRegister(params);
 
             }
         }
@@ -115,7 +115,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         return ParamsNetUtil.getReq("/user/register", params, "POST");
     }
 
-    public void testReq(String params) {
+    public void handleRegister(String params) {
 
         new Thread(new Runnable() {
             @Override

@@ -25,48 +25,6 @@
                 android:id="@+id/commoditiesPage"
                 >
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:layout_marginBottom="20dp"-->
-<!--                    android:onClick="enterDetail"-->
-<!--                    >-->
-<!--                    <ImageButton-->
-<!--                        android:id="@+id/list_img_1"-->
-<!--                        android:layout_width="100dp"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/dog"-->
-<!--                        android:scaleType="fitXY"-->
-<!--                        android:background="#FFFFFF"-->
-<!--                        >-->
-<!--                    </ImageButton>-->
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_margin="5dp"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"-->
-<!--                            android:textSize="18dp"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            >-->
-<!--                        </TextView>-->
-<!--                        <TextView-->
-<!--                            android:layout_margin="10px"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:text="￥100"-->
-<!--                            android:textSize="18dp"-->
-<!--                            android:textColor="#eb4450"-->
-<!--                            >-->
-<!--                        </TextView>-->
-<!--                    </LinearLayout>-->
-<!--                </LinearLayout>-->
-
             </LinearLayout>
 
         </ScrollView>

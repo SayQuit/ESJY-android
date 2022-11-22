@@ -255,11 +255,18 @@
                 android:text="上一页"></Button>
 
             <Button
+                android:onClick="enterAddDetail"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="添加商品"
+                android:layout_marginLeft="55dp"></Button>
+
+            <Button
                 android:onClick="nextPage"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="下一页"
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="55dp"
                 ></Button>
 
         </LinearLayout>
