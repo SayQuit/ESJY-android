@@ -1,11 +1,14 @@
 package com.example.jy;
 
+import static android.widget.ImageView.ScaleType.CENTER_CROP;
 import static android.widget.ImageView.ScaleType.FIT_XY;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,6 +20,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -37,6 +41,13 @@ public class shoppingCar extends AppCompatActivity {
     String account;
     boolean isLast;
     int page = 1;
+    float scaleNum = 3;
+
+    public static float scaleNum(Context context) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return scale;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +55,8 @@ public class shoppingCar extends AppCompatActivity {
         Intent i = this.getIntent();
         this.interface1=i.getStringExtra("interface");
         System.out.println(interface1);
+        scaleNum = scaleNum(this);
+        System.out.println(scaleNum);
         Account application;
         application=(Account)getApplicationContext();
         this.account=application.getAccount();
@@ -113,21 +126,22 @@ public class shoppingCar extends AppCompatActivity {
         String name = commodityObj.optString("name");
         String price = commodityObj.optString("price");
         String logo = commodityObj.optString("logo");
+        int padding = (int)(100*scaleNum/35);
 
         ImageButton image = new ImageButton(this);
-        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350,350);
+        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(35*padding,LinearLayout.LayoutParams.FILL_PARENT);
         image.setLayoutParams(imageParams);
         image.setImageBitmap(base642Bitmap(logo));
-        image.setScaleType(FIT_XY);
+        image.setScaleType(CENTER_CROP);
         image.setBackgroundColor(Color.WHITE);
 
         LinearLayout textLayout = new LinearLayout(this);
         textLayout.setOrientation(LinearLayout.VERTICAL);
         LinearLayout.LayoutParams textLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.MATCH_PARENT);
         textLayout.setLayoutParams(textLayoutParams);
-        textLayout.setPadding(20,20,20,20);
 
-        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,100);
+        textLayout.setPadding(2*padding,2*padding,2*padding,2*padding);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,10*padding);
         TextView text1 = new TextView(this);
         text1.setText(name);
         text1.setTextSize(18);
@@ -142,9 +156,10 @@ public class shoppingCar extends AppCompatActivity {
         textLayout.addView(text2);
 
         LinearLayout commodity = new LinearLayout(this);
-        LinearLayout.LayoutParams commodityParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,400);
+        LinearLayout.LayoutParams commodityParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,35*padding);
         commodity.setLayoutParams(commodityParams);
         commodity.setOrientation(LinearLayout.HORIZONTAL);
+        commodity.setPadding(padding,padding,padding,padding);
         commodity.addView(image);
         commodity.addView(textLayout);
         commodity.setOnClickListener(this::enterDetail);
