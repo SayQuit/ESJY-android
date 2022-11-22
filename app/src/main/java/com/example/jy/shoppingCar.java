@@ -1,5 +1,7 @@
 package com.example.jy;
 
+import static android.widget.ImageView.ScaleType.FIT_XY;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -116,7 +118,8 @@ public class shoppingCar extends AppCompatActivity {
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350,350);
         image.setLayoutParams(imageParams);
         image.setImageBitmap(base642Bitmap(logo));
-        image.setBackgroundColor(Color.BLACK);
+        image.setScaleType(FIT_XY);
+        image.setBackgroundColor(Color.WHITE);
 
         LinearLayout textLayout = new LinearLayout(this);
         textLayout.setOrientation(LinearLayout.VERTICAL);
