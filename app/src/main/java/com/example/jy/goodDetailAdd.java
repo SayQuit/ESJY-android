@@ -58,9 +58,9 @@ public class goodDetailAdd extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    public void enterClassify(){
+    public void enterMain(){
         Intent intent=new Intent();
-        intent.setClass(this,goodListAdd.class);
+        intent.setClass(this,Main.class);
         startActivity(intent);
     }
 
@@ -80,7 +80,7 @@ public class goodDetailAdd extends AppCompatActivity implements View.OnClickList
                     if (!message.equals("success")) {
                         System.out.println("提交失败！");
                     } else{
-                        enterClassify();
+                        enterMain();
                     }
 
 

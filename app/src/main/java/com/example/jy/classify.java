@@ -85,10 +85,12 @@ public class classify extends AppCompatActivity {
         return mBitmap;
     }
     private void setImg(int index,String img){
+        this.img[index].setVisibility(View.VISIBLE);
         this.img[index].setImageBitmap(base642Bitmap(img));
 
     }
     private void setTxt(int index,String text){
+        this.txt[index].setVisibility(View.VISIBLE);
         this.txt[index].setText(text);
 
     }
@@ -108,6 +110,7 @@ public class classify extends AppCompatActivity {
 
             if (msg.what == 0) {
                 String strData = (String) msg.obj;
+
 //                System.out.println(txt[0]);
 
 
@@ -115,7 +118,7 @@ public class classify extends AppCompatActivity {
                     JSONObject json = new JSONObject(strData);
                     String goodlist=json.optString("goodlist");
                     isLast=json.optBoolean("isLast");
-
+                    System.out.println(json.optBoolean("isLast"));
                     JSONArray array = new JSONArray(goodlist);
 //                    System.out.println(array);
 

@@ -109,11 +109,12 @@ public class list extends AppCompatActivity {
 
 
     private void setImg(int index,String img){
-
+        this.img[index].setVisibility(View.VISIBLE);
         this.img[index].setImageBitmap(base642Bitmap(img));
 
     }
     private void setTxt(int index,String text){
+        this.txt[index].setVisibility(View.VISIBLE);
         this.txt[index].setText(text);
 
     }
@@ -122,6 +123,7 @@ public class list extends AppCompatActivity {
 
     }
     private void setPrice(int index,String text){
+//        System.out.println(text);
         this.price[index].setText(text);
 
     }

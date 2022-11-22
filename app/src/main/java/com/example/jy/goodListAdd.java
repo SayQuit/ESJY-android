@@ -49,10 +49,9 @@ public class goodListAdd extends AppCompatActivity implements View.OnClickListen
             testReq(params);
         }
     }
-    public void enterList(){
+    public void enterMain(){
         Intent intent=new Intent();
-        intent.putExtra("pid","1");
-        intent.setClass(this,list.class);
+        intent.setClass(this,Main.class);
         startActivity(intent);
 
     }
@@ -70,7 +69,7 @@ public class goodListAdd extends AppCompatActivity implements View.OnClickListen
 
                     if (!message.equals("success")) {
                         System.out.println("提交失败！");
-                    } else enterList();
+                    } else enterMain();
 
 
                 } catch (JSONException e) {
