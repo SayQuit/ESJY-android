@@ -12,270 +12,265 @@
         android:orientation="vertical"
         >
 
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:tag="0"
-            android:onClick="enterDetail"
-            >
-            <ImageButton
-                android:id="@+id/listimg1"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog"
-                android:scaleType="fitXY"
-                android:background="#FFFFFF"
-
-                >
-            </ImageButton>
+            android:layout_height="match_parent">
             <LinearLayout
-
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
-                <TextView
-                    android:id="@+id/listcont1"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:tag="0"
+                    android:onClick="enterDetail"
                     >
-                </TextView>
-                <TextView
-                    android:id="@+id/listprice1"
-                    android:layout_margin="10px"
+                    <ImageButton
+                        android:id="@+id/listimg1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dog"
+                        android:scaleType="fitXY"
+                        android:background="#FFFFFF"
+
+                        >
+                    </ImageButton>
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/listcont1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/listprice1"
+                            android:layout_margin="10px"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="￥100"
+                            android:textSize="18dp"
+                            android:textColor="#eb4450"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="￥100"
-                    android:textSize="18dp"
-                    android:textColor="#eb4450"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:tag="1"
+                    android:onClick="enterDetail">
+                    <ImageButton
+                        android:id="@+id/listimg2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dog"
+                        android:scaleType="fitXY"
+                        android:background="#FFFFFF"
+                        >
+                    </ImageButton>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/listcont2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                            android:textSize="18dp"
+                            android:textColor="@color/black">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/listprice2"
+                            android:layout_margin="10px"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="￥100"
+                            android:textSize="18dp"
+                            android:textColor="#eb4450"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:tag="2"
+                    android:onClick="enterDetail">
+                    <ImageButton
+                        android:id="@+id/listimg3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dog"
+                        android:scaleType="fitXY"
+                        android:background="#FFFFFF"
+                        >
+                    </ImageButton>
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/listcont3"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                            android:textSize="18dp"
+                            android:textColor="@color/black">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/listprice3"
+                            android:layout_margin="10px"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="￥100"
+                            android:textSize="18dp"
+                            android:textColor="#eb4450"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:tag="3"
+                    android:onClick="enterDetail">
+                    <ImageButton
+                        android:id="@+id/listimg4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dog"
+                        android:scaleType="fitXY"
+                        android:background="#FFFFFF"
+                        >
+                    </ImageButton>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/listcont4"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                            android:textSize="18dp"
+                            android:textColor="@color/black">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/listprice4"
+                            android:layout_margin="10px"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="￥100"
+                            android:textSize="18dp"
+                            android:textColor="#eb4450"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:tag="4"
+                    android:onClick="enterDetail"
                     >
-                </TextView>
+                    <ImageButton
+                        android:id="@+id/listimg5"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dog"
+                        android:scaleType="fitXY"
+                        android:background="#FFFFFF"
+                        >
+                    </ImageButton>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/listcont5"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
+                            android:textSize="18dp"
+                            android:textColor="@color/black">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/listprice5"
+                            android:layout_margin="10px"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="￥100"
+                            android:textSize="18dp"
+                            android:textColor="#eb4450"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:onClick="lastPage"
+                        android:text="上一页"></Button>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="55dp"
+                        android:onClick="enterAddDetail"
+                        android:text="添加商品"></Button>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="55dp"
+                        android:onClick="nextPage"
+                        android:text="下一页"></Button>
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:tag="1"
-            android:onClick="enterDetail">
-            <ImageButton
-                android:id="@+id/listimg2"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog"
-                android:scaleType="fitXY"
-                android:background="#FFFFFF"
-                >
-            </ImageButton>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:id="@+id/listcont2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                    android:textSize="18dp"
-                    android:textColor="@color/black">
-                </TextView>
-                <TextView
-                    android:id="@+id/listprice2"
-                    android:layout_margin="10px"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="￥100"
-                    android:textSize="18dp"
-                    android:textColor="#eb4450"
-                    >
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:tag="2"
-            android:onClick="enterDetail">
-            <ImageButton
-                android:id="@+id/listimg3"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog"
-                android:scaleType="fitXY"
-                android:background="#FFFFFF"
-                >
-            </ImageButton>
-            <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:id="@+id/listcont3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                    android:textSize="18dp"
-                    android:textColor="@color/black">
-                </TextView>
-                <TextView
-                    android:id="@+id/listprice3"
-                    android:layout_margin="10px"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="￥100"
-                    android:textSize="18dp"
-                    android:textColor="#eb4450"
-                    >
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:tag="3"
-            android:onClick="enterDetail">
-            <ImageButton
-                android:id="@+id/listimg4"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog"
-                android:scaleType="fitXY"
-                android:background="#FFFFFF"
-                >
-            </ImageButton>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:id="@+id/listcont4"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                    android:textSize="18dp"
-                    android:textColor="@color/black">
-                </TextView>
-                <TextView
-                    android:id="@+id/listprice4"
-                    android:layout_margin="10px"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="￥100"
-                    android:textSize="18dp"
-                    android:textColor="#eb4450"
-                    >
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:tag="4"
-            android:onClick="enterDetail"
-            >
-            <ImageButton
-                android:id="@+id/listimg5"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog"
-                android:scaleType="fitXY"
-                android:background="#FFFFFF"
-                >
-            </ImageButton>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:id="@+id/listcont5"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述物品描述"
-                    android:textSize="18dp"
-                    android:textColor="@color/black">
-                </TextView>
-                <TextView
-                    android:id="@+id/listprice5"
-                    android:layout_margin="10px"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="￥100"
-                    android:textSize="18dp"
-                    android:textColor="#eb4450"
-                    >
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-            <Button
-                android:onClick="lastPage"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="上一页"></Button>
-
-            <Button
-                android:onClick="enterAddDetail"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="添加商品"
-                android:layout_marginLeft="55dp"></Button>
-
-            <Button
-                android:onClick="nextPage"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="下一页"
-                android:layout_marginLeft="55dp"
-                ></Button>
-
-        </LinearLayout>
-
-
-
-
-
-
+        </ScrollView>
 
 
 
