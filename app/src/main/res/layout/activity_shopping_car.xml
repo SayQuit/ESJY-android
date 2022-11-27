@@ -30,23 +30,23 @@
         </ScrollView>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp">-->
 
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="删除"></Button>
+<!--            <Button-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:text="删除"></Button>-->
 
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="购买"
-                android:layout_marginLeft="200dp"
-                ></Button>
+<!--            <Button-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:text="购买"-->
+<!--                android:layout_marginLeft="200dp"-->
+<!--                ></Button>-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

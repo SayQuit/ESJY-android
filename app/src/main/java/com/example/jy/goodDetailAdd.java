@@ -20,10 +20,14 @@ import util.ParamsNetUtil;
 
 public class goodDetailAdd extends AppCompatActivity implements View.OnClickListener {
 
+    String pid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_good_detail_add);
+
+        Intent i = this.getIntent();
+        this.pid=i.getStringExtra("pid");
 
         //绑定按钮
         Button submit = findViewById(R.id.submit);
@@ -49,7 +53,7 @@ public class goodDetailAdd extends AppCompatActivity implements View.OnClickList
             Account application;
             application = (Account) getApplicationContext();
             //取消下面这个注释，可使用当前登录的账号
-            String params = "?name=" + description + "&number=1&price=" + price + "&logo=" + picture + "&pid=1&owner="+application.getAccount();
+            String params = "?name=" + description + "&number=1&price=" + price + "&logo=" + picture + "&pid="+this.pid+"&owner="+application.getAccount();
 
             //内测账号
             //String params = "?name=" + description + "&number=1&price=" + price + "&logo=" + picture + "&pid=1&owner=10582165171";
@@ -65,7 +69,6 @@ public class goodDetailAdd extends AppCompatActivity implements View.OnClickList
     }
 
 
-    //网络部分
     private Handler mHandler = new Handler(Looper.myLooper()) {
         @Override
         public void handleMessage(@NonNull Message msg) {

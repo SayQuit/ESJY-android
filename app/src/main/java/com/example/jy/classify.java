@@ -110,6 +110,7 @@ public class classify extends AppCompatActivity {
 
             if (msg.what == 0) {
                 String strData = (String) msg.obj;
+                System.out.println(strData);
 
 //                System.out.println(txt[0]);
 

@@ -124,6 +124,7 @@ public class list extends AppCompatActivity {
     }
     private void setPrice(int index,String text){
 //        System.out.println(text);
+        this.price[index].setVisibility(View.VISIBLE);
         this.price[index].setText(text);
 
     }
@@ -209,7 +210,10 @@ public class list extends AppCompatActivity {
         Account application;
         application = (Account) getApplicationContext();
         if(application.getAccount().equals(""))return;
+
+
         Intent intent=new Intent();
+        intent.putExtra("pid",this.pid);
         intent.setClass(this,goodDetailAdd.class);
         startActivity(intent);
     }

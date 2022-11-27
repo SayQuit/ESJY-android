@@ -60,7 +60,6 @@ public class NetUtil {
 
         return bookJSONString;
     }
-
     public static String getReq(String req) {
         String BaseUrl = "http://39.108.8.211";
         String realUrl = BaseUrl+req;

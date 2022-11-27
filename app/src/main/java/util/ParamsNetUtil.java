@@ -59,7 +59,6 @@ public class ParamsNetUtil {
 
         return bookJSONString;
     }
-
     public static String getReq(String req,String params,String way) {
         String BaseUrl = "http://39.108.8.211";
         String realUrl = BaseUrl+req+params;
