@@ -95,6 +95,7 @@ public class classify extends AppCompatActivity {
 
     }
     private void setId(int index,String id){
+//        System.out.println(id);
         this.id[index]=id;
 
     }

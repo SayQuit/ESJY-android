@@ -12,20 +12,23 @@
         android:orientation="vertical"
         >
 
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:iconifiedByDefault="true"
-            android:imeOptions="actionSearch"
-            android:queryHint="搜索"
-            android:singleLine="true"></SearchView>
+<!--        <SearchView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:iconifiedByDefault="true"-->
+<!--            android:imeOptions="actionSearch"-->
+<!--            android:queryHint="搜索"-->
+<!--            android:singleLine="true"></SearchView>-->
 
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/dog" />
+            app:srcCompat="@drawable/banner1"
+            android:onClick="enterDetail"
+            android:tag="1"
+            />
 
 
         <LinearLayout
@@ -128,7 +131,10 @@
                 android:layout_width="150dp"
                 android:background="@color/white"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/food1" />
+                android:src="@drawable/banner4"
+                android:scaleType="fitXY"
+                android:onClick="enterDetail"
+                android:tag="27e364aa-36b2-4303-9645-6056fa4838cd" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -139,13 +145,20 @@
                     android:layout_width="260dp"
                     android:layout_height="120dp"
                     android:background="@color/white"
-                    app:srcCompat="@color/purple_500" />
+                    android:src="@drawable/banner2"
+                    android:onClick="enterDetail"
+                    android:tag="4"
+                    android:scaleType="fitXY"
+                    />
                 <ImageButton
                     android:id="@+id/mainButton3"
                     android:layout_width="260dp"
                     android:layout_height="120dp"
                     android:background="@color/white"
-                    app:srcCompat="@drawable/car" />
+                    android:src="@drawable/banner3"
+                    android:onClick="enterDetail"
+                    android:tag="5201819e-8c7a-4922-9bb1-d30f9af790c3"
+                    android:scaleType="fitXY" />
             </LinearLayout>
 
         </LinearLayout>

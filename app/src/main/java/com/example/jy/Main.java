@@ -21,6 +21,12 @@ public class Main extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, classify.class);
         startActivity(intent);
+    };
+    public void enterDetail(View v){
+        Intent intent = new Intent();
+        intent.putExtra("pid",v.getTag().toString());
+        intent.setClass(this, list.class);
+        startActivity(intent);
     }
     public void enterUser(View v){
         Account application;
